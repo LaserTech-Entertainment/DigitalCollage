@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Phase1</title>
+		<title>LaserTech</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -48,35 +48,24 @@
 				margin-left: auto;
 				margin-right: auto;
 			}
+			
+			#thanks {
+				margin-top: 32px;
+				margin-bottom: 32px;
+				font-weight: 700;
+				font-size: 20px;
+				display: block;
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body class="container">
 		<div class="row justify-content-center">
 			<div class="card form-card col-lg-4">
 				<img class="logo" src="logo.png" />
-				<form id="upload_form" action="https://api.fotomasterltd.net/photo-mosaic-booth/user_upload.php" method="post" enctype="multipart/form-data">
-					<div class="row justify-content-center">
-						<div class="col-12">
-							<div class="form-group">
-								<label for="title">Name</label>
-								<input class="form-control" type="text" name="name" id="name" />
-							</div>
-						</div>
-						<div class="col-12">
-							<div class="form-group">
-								<p id="fileName">You have not selected any file.</p>
-								<label id="fileUploadLabel" for="imageUpload" class="btn btn-primary" onclick="document.getElementById('fileUpload').click()">Upload your photo</label>
-								<input id="fileUpload" class="form-control" type="file" name="Filedata"></input>
-							</div>
-						</div>
-					</div>
-					
-					<input class="btn" type="submit" value="Send" name="submit" />
-					<input type='hidden' name='pid' value='1236254' />
-					<input type='hidden' name='eventName' value='1591861001708-LaserTech_New' />
-					<input type='hidden' name='weakPassword' value='fotomaster_browse' />
-					<input type='hidden' name='redirect_url' value='https://lasertech.in' />
-				</form>
+				<p id="thanks">You have successfully uploaded your photo.</p>
+				<a class="preview btn btn-primary" href="result.html">Open 3D Preview</a>
+				<a class="preview btn btn-primary" href="other.html">Open 2D Preview</a>
 			</div>
 		</div>
 		<script>
